@@ -47,6 +47,23 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        postcss: {
+            options: {
+                map: {
+                    inline: false
+                },
+                processors: [
+                    require('pixrem')(), //adds fallbacks for rem
+                    require('autoprefixer-core')({browsers: ['last 2 versions', 'ie9']}) // add vendor prefixes
+                ]
+            },
+            build: {
+                processors: [
+                    require('pixrem')(),
+                    require('autoprefixer-core')({browsers: ['last 2 versions', 'ie9']}) // add vendor prefixes
+                ]
+            }
+        },
 
         // run tasks in parallel
         concurrent: {
