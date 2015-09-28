@@ -1,0 +1,25 @@
+////////////////////////
+// Platform Styles
+//
+// Sometimes we have common elements from our CMS
+// that require further styling considerations.
+////////////////////////
+
+////////////////////////
+// Variables
+////////////////////////
+
+////////////////////////
+// Mixins / Extends
+////////////////////////
+
+// Drupal Tabs
+.tabs a {
+    @extend %btn;
+    &:hover {
+        color: $white;
+    }
+    &.is-active {
+        background: lighten($btn-default-bg, 10%);
+    }
+}

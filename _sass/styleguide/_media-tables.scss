@@ -1,0 +1,81 @@
+////////////////////////
+// Tables
+////////////////////////
+
+////////////////////////
+// Variables
+////////////////////////
+$table-border: #ddd;
+$table-cell-padding: 8px;
+$table-row-stripe-bg: #f9f9f9;
+
+////////////////////////
+// Mixins / Extends
+////////////////////////
+// Providing some default styles, but abstracting
+// for simple use or non-use.
+%table-cells {
+    padding: 8px;
+    tbody & {
+        border-top: 1px solid $table-border;
+    }
+}
+
+@mixin table-default() {
+    tr {
+        &:nth-of-type(2n+1) {
+            background: $table-row-stripe-bg;
+        }
+    }
+    th {
+        @extend %table-cells;
+        thead & {
+            border-top: 0;
+            border-bottom: 2px solid $table-border;
+        }
+    }
+    td {
+        @extend %table-cells;
+    }
+    tbody + tbody {
+        border-top: 2px solid $table-border;
+    }
+}
+
+////////////////////////
+// Styles
+////////////////////////
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: transparent;
+}
+
+thead {
+
+}
+
+tbody {
+
+}
+
+tr {
+    thead & {}
+    tbody & {}
+}
+
+th {
+    thead & {
+        vertical-align: bottom;
+    }
+    tbody & {
+        vertical-align: top;
+    }
+}
+
+td {}
+
+// add our default styles
+@include table-default;

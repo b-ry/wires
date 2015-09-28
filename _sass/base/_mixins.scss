@@ -1,0 +1,49 @@
+////////////////////////
+// Mixins Partials
+//
+// Add global mixins to this file.
+////////////////////////
+
+// Clearfix
+@mixin clear() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Rem mixin
+// This mixin will allow for rems but defaults to px.
+@mixin rem($size, $attribute:font-size) {
+    #{$attribute}: ($size * 10) + px;
+    #{$attribute}: $size + rem;
+}
+
+//This is a friendly mixin, not used unless you use it.
+// Found @ http://css-tricks.com/snippets/css/sticky-footer/
+@mixin sticky_footer($height:125px, $large_height: 130px){
+  html, body, .l-container{
+    height:100%;
+  }
+  .content-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -($height);
+    @include respond-to('large') {
+      margin-bottom: -($large_height);
+    }
+  }
+  .content-wrap:after {
+    content: "";
+    display: block;
+  }
+  #footer,
+  .content-wrap:after {
+    /* #main-after must be the same height as footer */
+    height: $height;
+    @include respond-to('large') {
+      height: $large_height;
+    }
+  }
+}
