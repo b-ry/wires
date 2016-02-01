@@ -23,7 +23,7 @@ In your terminal run these commands:
 
     1. $npm install
 
-    2. $npm bower install
+    2. $bower install
 
     3. $grunt serve
 
