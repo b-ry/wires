@@ -20,6 +20,15 @@ module.exports = function (grunt) {
             }
         },
 
+        //copying bootstrap sass to _scss folder
+        copy: {
+            bootstrap: {
+                files: [
+                    {expand: true, cwd: 'bower_components/bootstrap/scss', src: ['**'], dest: '_sass/bootstrap'}
+                ]
+            }
+        },
+
         // watch for files to change and run tasks when they do
         watch: {
             sass: {
