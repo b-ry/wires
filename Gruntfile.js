@@ -1,6 +1,8 @@
-'use strict';
+
 
 module.exports = function (grunt) {
+    'use strict';
+    var sassLib = ['bower_components'];
 
     // Show elapsed time after tasks run to visualize performance
     require('time-grunt')(grunt);
