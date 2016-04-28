@@ -1,6 +1,8 @@
-'use strict';
+
 
 module.exports = function (grunt) {
+    'use strict';
+    var sassLib = ['bower_components'];
 
     // Show elapsed time after tasks run to visualize performance
     require('time-grunt')(grunt);
@@ -17,6 +19,15 @@ module.exports = function (grunt) {
             },
             jekyllServe: {
                 command: 'jekyll serve'
+            }
+        },
+
+        //copying bootstrap sass to _scss folder
+        copy: {
+            bootstrap: {
+                files: [
+                    {expand: true, cwd: 'bower_components/bootstrap/scss', src: ['**'], dest: '_sass/bootstrap'}
+                ]
             }
         },
 
