@@ -4,6 +4,13 @@ module.exports = function (grunt) {
     'use strict';
     var sassLib = ['bower_components'];
 
+    var jsFileList = [
+      'js/plugins/_*.js',
+      'js/plugins/*.js',
+      'js/_*.js',
+      'js/*.js'
+    ];
+
     // Show elapsed time after tasks run to visualize performance
     require('time-grunt')(grunt);
     // Load all Grunt tasks that are listed in package.json automagically
@@ -11,6 +18,24 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        jshint: {
+          options: {
+            jshintrc: '.jshintrc'
+          },
+          all: [
+            'Gruntfile.js',
+            'js/_*.js'
+          ]
+        },
+        concat: {
+          options: {
+            separator: ';',
+          },
+          dist: {
+            src: jsFileList,
+            dest: 'js/dist/scripts.js',
+          },
+        },
 
         // shell commands for use in Grunt tasks
         shell: {
@@ -35,7 +60,11 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['_sass/**/*.{scss,sass}'],
-                tasks: ['sass']
+                tasks: ['sass','jshint','concat']
+            },
+            concat: {
+                files: [jsFileList],
+                tasks: ['jshint','concat']
             }
         },
 
@@ -80,6 +109,8 @@ module.exports = function (grunt) {
         concurrent: {
             serve: [
                 'sass',
+                'jshint',
+                'concat',
                 'watch',
                 'shell:jekyllServe'
             ],
@@ -98,7 +129,8 @@ module.exports = function (grunt) {
     // Register the grunt build task
     grunt.registerTask('build', [
         'shell:jekyllBuild',
-        'sass'
+        'sass',
+        'concat'
     ]);
 
     // Register build as the default task fallback

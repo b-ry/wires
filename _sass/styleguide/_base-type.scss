@@ -70,32 +70,32 @@ body {
 
 h1 {
     @include rem($h1-size);
-    @extend %headings;
+    // @extend %headings;
 }
 
 h2 {
     @include rem($h2-size);
-    @extend %headings;
+    // @extend %headings;
 }
 
 h3 {
     @include rem($h3-size);
-    @extend %headings;
+    // @extend %headings;
 }
 
 h4 {
     @include rem($h4-size);
-    @extend %headings;
+    // @extend %headings;
 }
 
 h5 {
     @include rem($h5-size);
-    @extend %headings;
+    // @extend %headings;
 }
 
 h6 {
     @include rem($h6-size);
-    @extend %headings;
+    // @extend %headings;
 }
 
 blockquote {
