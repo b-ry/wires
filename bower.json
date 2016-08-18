@@ -17,5 +17,8 @@
     "singularity": "~1.6.2",
     "compass-mixins": "0.12.7",
     "bootstrap": "v4.0.0-alpha.2"
+  },
+  "dependencies": {
+    "gsap": "^1.18.4"
   }
 }
