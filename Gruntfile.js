@@ -1,7 +1,6 @@
-'use strict';
+
 
 module.exports = function (grunt) {
-  
     var sassLib = ['bower_components'];
 
     var jsFileList = [
