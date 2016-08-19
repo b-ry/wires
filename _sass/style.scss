@@ -1,9 +1,11 @@
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "bower_components/bootstrap/scss/bootstrap",
-  "base/base",
-  "layout/layout",
-  "design/design",
-  "styleguide/styleguide",
-  "syntax-highlighting"
-;
+// Welcome to front. Please dont add styles to me here.
+
+// Base handles dependencies, variables, and reusable sass components.
+@import "base/base";
+
+// Layout handles your layout. Keep it separated from your design elements.
+@import "layout/layout";
+
+// Design is where the magic happens, and that magic comes from you.
+@import "design/design";
+

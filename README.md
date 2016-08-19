@@ -3,25 +3,18 @@
 ## Requirements
 In order to get the system up you'll need to have installed:
 
-* node.js
-* bower
+* [node.js](https://nodejs.org/en/)
+* [grunt](http://gruntjs.com/getting-started)
+* [bower](https://bower.io/)
 
-You can download node.js [here](https://nodejs.org/en/)
-
-Once node.js is installed run the following command in your terminal.
-
-    $npm install -g bower
-
-This will install bower globally on your system.
-
-## Installing
+## Installing 
 
 * Clone project
 * cd/[PROJECT]
 
 In your terminal run these commands:
 
-    1. $npm install
+    1. $npm install  _You may need to sudo in order for this command to work_
 
     2. $bower install
 

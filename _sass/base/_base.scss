@@ -1,24 +1,13 @@
-////////////////////////
-// Base Partials
-//
-// These files will be shared across all three of your output CSS files. Generally included here are only Compass Extension imports and imports for variables, functions, mixins, and extendables.
-//
-////////////////////////
+// Base gets everything going.
 
-////////////////////////
-// Compass Extensions
-////////////////////////
-@import
-  "bower_components/breakpoint-sass/stylesheets/breakpoint",
-  "bower_components//singularity/stylesheets/singularitygs"
-;
+// Styleguide - defines base variables & styles for bootstrap.
+@import "styleguide-base";
+@import "styleguide-buttons-links";
+@import "styleguide-forms";
+// Bootstrap-specific components
+@import "styleguide-twbs-nav";
 
-////////////////////////
-// Private Imports
-////////////////////////
-@import
-  "variables",
-  "functions",
-  "mixins",
-  "extends"
-;
+// Controls what bootstrap styles you have
+@import "bootstrap";
+
+@import "functions";
