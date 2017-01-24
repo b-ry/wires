@@ -1,23 +1,21 @@
-<header class="site-header">
-
+<header class="site-header clearfix">
   <div class="wrapper">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-    <nav class="site-nav">
-
+    {% if page.url == "/" %}
+       <a class="site-logo" href="{{ site.baseurl }}/"><img src="/img/theme/bu-logo.svg"/></a>
+    {% else %}
+       <a class="site-logo" href="{{ site.baseurl }}/"><img src="/img/theme/bu-logo-bw.svg"/></a>
+    {% endif %}
+    <nav class="site-nav clearfix">
+      {% include components/navbars/navbar.html %}
       <div class="trigger">
         {% for page in site.pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
-       </div>
-
+      </div>
     </nav>
-
-   <!-- {% include components/navs/mobile-slide-out.html %} -->
-
   </div>
-
 </header>
+
+

@@ -1,5 +1,5 @@
 # Site settings
-title: Your awesome title
+title: Bryon Urbanec Portfolio
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 # Build settings
@@ -7,3 +7,5 @@ markdown: kramdown
 
 exclude: ['node_modules', ‘css’, ‘_scss’]
 keep_files: ['_site/css']
+
+github_username:  b-ry

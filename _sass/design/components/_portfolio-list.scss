@@ -1,0 +1,97 @@
+.portfolio {
+	margin: 15rem 0 ;
+}
+
+.portfolio ul.post-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.portfolio ul.post-list li {
+	// width: 35.9rem;
+	height: 46rem;
+	overflow: hidden;
+	margin: 0;
+}
+
+.portfolio ul.post-list a {
+	background: transparent;
+	display: block;
+	// width: 35.9rem;
+	height: 46rem;
+	overflow: hidden;
+	border: none;
+	position: relative;
+	transition-duration: .2s;
+
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+	&:hover {
+		background: linear-gradient( -45deg, 
+		    rgba(white, 1)  25%, 
+		    rgba(white, 0.75)       25%, 
+		    rgba(white, 0.75)       50%, 
+		    rgba(white, 1)  50%, 
+		    rgba(white, 1)  75%, 
+		    rgba(white, 0.75)       75%, 
+		    rgba(white, 0.75)
+		);
+
+	    background-size: 200px 200px;
+
+		-webkit-animation: barberpole 8s linear infinite;
+		-moz-animation:barberpole 8s linear infinite;
+		animation: barberpole 8s linear infinite;
+
+		@-webkit-keyframes barberpole {
+		    from { background-position: 0 0; }
+  			to { background-position: 200px 400px; }
+		}
+		@-moz-keyframes barberpole {
+		    from { background-position: 0 0; }
+  			to { background-position: 200px 400px; }
+		}
+		@keyframes barberpole { 
+		    from { background-position: 0 0; }
+  			to { background-position: 200px 400px; }
+		}
+		h2 {
+			display: block;
+		}
+	}
+	h2 {
+		display: none;
+	}
+}
+
+.portfolio ul.post-list img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;	
+	position: relative;
+	z-index: -1;
+}
+
+.portfolio .project-content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio .project-content h2 {
+	color: $primary;
+	font-size: 3rem;
+	line-height: 1;
+	padding: 1rem;
+	width: 90%;
+	height: 92%;
+	margin: 5%;
+	border: 5px solid $primary;
+}

@@ -1,0 +1,23 @@
+<div class="portfolio clearfix">
+<h2 class="section-title">Work</h2>
+   
+   <ul class="post-list row no-gutters">
+      {% for post in site.posts %}
+        <li class="col-sm-12 col-md-6 col-lg-4">
+     			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+  	        
+            <div class="project-content">
+              <h2>
+    	          {{ post.title }}
+    	        </h2>
+            </div>
+
+            {% if post.teaser-image %}
+          	<img src="{{site.baseurl}}/img/{{post.teaser-image}}" />
+            {% endif %}
+        	</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+</div>
