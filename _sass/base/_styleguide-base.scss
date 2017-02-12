@@ -17,21 +17,12 @@ $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$gray-one:                  #212121;
-$gray-two:                  #424242;
-
 $brand-primary:             #0275d8 !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
 
-$primary:                   #ff6f00;
-$primary-mid:               #ff8f00;
-$primary-lt:                #ffa000;
-
-$secondary:                 #00bfa5;
-$purple:                    #5f0441;
 
 // Options
 //
@@ -106,29 +97,25 @@ $grid-gutter-width:          1.875rem !default; // 30px
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Overpass:300,400,900');
 
-$font-family-sans-serif:     "Overpass", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:           $font-family-sans-serif !default;
 
-
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root:             10px !default;
+$font-size-root:             16px !default;
 
-$font-size-base:             2rem !default;
-$font-size-lg:               2.25rem !default;
-$font-size-sm:               1rem !default;
-$font-size-xs:               .85rem !default;
+$font-size-base:             1rem !default;
+$font-size-lg:               1.25rem !default;
+$font-size-sm:               .85rem !default;
+$font-size-xs:               .75rem !default;
 
-$font-size-h1:               4.6rem !default;
-$font-size-h2:               3rem !default;
-$font-size-h3:               2.5rem !default;
-$font-size-h4:               2rem !default;
-$font-size-h5:               1.75rem !default;
+$font-size-h1:               2.5rem !default;
+$font-size-h2:               2rem !default;
+$font-size-h3:               1.75rem !default;
+$font-size-h4:               1.5rem !default;
+$font-size-h5:               1.25rem !default;
 $font-size-h6:               1rem !default;
 
 $display1-size:               6rem !default;
@@ -136,12 +123,12 @@ $display2-size:               5.5rem !default;
 $display3-size:               4.5rem !default;
 $display4-size:               3.5rem !default;
 
-$display1-weight:             700 !default;
-$display2-weight:             700 !default;
-$display3-weight:             700 !default;
-$display4-weight:             700 !default;
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
 
-$line-height:                1.65 !default;
+$line-height:                1.5 !default;
 
 $headings-margin-bottom:     ($spacer / 2) !default;
 $headings-font-family:       inherit !default;
@@ -150,7 +137,7 @@ $headings-line-height:       1.1 !default;
 $headings-color:             inherit !default;
 
 $lead-font-size:             1.25rem !default;
-$lead-font-weight:           400 !default;
+$lead-font-weight:           300 !default;
 
 $text-muted:                  $gray-light !default;
 

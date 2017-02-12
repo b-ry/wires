@@ -4,51 +4,6 @@
 // Use bootstrap grid or not, up to you. See example for ... examples.
 // 
 
- // @import "bootstrap-grid";
+ @import "bootstrap-grid";
 
-// .container {
-//   max-width: 60em;
-//   @include make-container();
-//   padding: 0 1rem;
-// }
-
-// .row {
-//   @include make-row();
-// }
-
-.container-fluid {
-	@include media-breakpoint-up(sm) {
-		padding: 0 3.5rem;
-	}
-}
-
-#main {
-	margin-top: 10rem;
-}
-
-body {
-	position: relative;
-}
-
-.page-cover-bg {
-    @include media-breakpoint-up(lg) {
-    	display: block;
-	    position: fixed;
-	    top: 0;
-	    right: 0;
-	    width: 32%;
-	    overflow: hidden;
-	    height: 100vh;
-	    background: rgba(89,39,0,1);
-background: -moz-linear-gradient(45deg, rgba(89,39,0,1) 0%, rgba(66,29,1,1) 49%, rgba(51,51,51,1) 100%);
-background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(89,39,0,1)), color-stop(49%, rgba(66,29,1,1)), color-stop(100%, rgba(51,51,51,1)));
-background: -webkit-linear-gradient(45deg, rgba(89,39,0,1) 0%, rgba(66,29,1,1) 49%, rgba(51,51,51,1) 100%);
-background: -o-linear-gradient(45deg, rgba(89,39,0,1) 0%, rgba(66,29,1,1) 49%, rgba(51,51,51,1) 100%);
-background: -ms-linear-gradient(45deg, rgba(89,39,0,1) 0%, rgba(66,29,1,1) 49%, rgba(51,51,51,1) 100%);
-background: linear-gradient(45deg, rgba(89,39,0,1) 0%, rgba(66,29,1,1) 49%, rgba(51,51,51,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#592700', endColorstr='#333333', GradientType=1 );
-    	-webkit-clip-path: polygon(10% 0,100% 0,100% 100%,0 100%);
-    	clip-path: polygon(10% 0,100% 0,100% 100%,0 100%);
-    	z-index: -1;
-    }
-}
+ //@TODO: some other stuff
