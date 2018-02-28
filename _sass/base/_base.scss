@@ -1,13 +1,7 @@
 // Base gets everything going.
 
-// Styleguide - defines base variables & styles for bootstrap.
-@import "styleguide-base";
-@import "styleguide-buttons-links";
-@import "styleguide-forms";
-// Bootstrap-specific components
-@import "styleguide-twbs-nav";
-
-// Controls what bootstrap styles you have
-@import "bootstrap";
-
+@import "reset";
+@import "variables";
 @import "functions";
+@import "mixins";
+@import "utilities";

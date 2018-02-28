@@ -1,5 +1,3 @@
-
-
 module.exports = function (grunt) {
     var sassLib = ['bower_components'];
 
